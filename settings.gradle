@@ -1,0 +1,33 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+        google()
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+    plugins {}
+    resolutionStrategy {
+        eachPlugin {
+            if (it.requested.id.getNamespace() == 'com.huawei.agconnect') {
+                println ">> ${it.requested.id.id}"
+                if (it.requested.id.id == 'com.huawei.agconnect.agcp') {
+                    it.useModule('com.huawei.agconnect:agcp:1.6.3.300')
+                }
+                println ">> ${it.target}"
+            } else {
+                println ">  ${it.target}"
+            }
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        // Configure the Maven repository address for the HMS Core SDK.
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+}
+rootProject.name = "ML_Kit_Sample"
+include ':app'

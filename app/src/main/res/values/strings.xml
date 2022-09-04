@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ML_Kit_Sample</string>
+    <string name="ml_kit">HMS ML KIT (OCR)</string>
+    <string name="alter_title">Please select image source</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="main_text">To Use OCR: \nClick on the below image\n\n1: Choose image from Gallery\n\nOr\n\n2: Capture image using mobile camera</string>
+    <string name="sub_main_text">Click here! to choose or cature image</string>
+    <string name="extracted_text_is">Extracted text is</string>
+</resources>
